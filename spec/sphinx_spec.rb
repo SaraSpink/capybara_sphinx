@@ -1,8 +1,9 @@
 require('rspec')
 require('sphinx')
-describe('Sphinx#ask_riddle') do
-  it('displays a riddle') do
+describe('Sphinx#riddle_compare') do
+  it('determine how many riddles are solved') do
   sphinx = Sphinx.new()
-  expect(sphinx.ask_riddle()).to(eq("Can you name three consecutive days without using the words Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?"))
+
+  expect(sphinx.riddle_compare("Yesterday, Today, and Tomorrow.")).to(eq(1))
   end
 end
